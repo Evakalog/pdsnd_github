@@ -10,7 +10,7 @@ This project prompts the user to choose from a list of cities and it returns the
 ### Files used
 This program uses:
 * a python file
-    bikeshare.py
+  1. bikeshare.py
 * and 3 csv files as data sources:
   1. chicago.csv,
   2. new_york_city.csv,
