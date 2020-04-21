@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+This project and README file was created on Tuesday 21 April 2020.
 
 ### Project Title
-Replace the Project Title
+Bikeshare.py
 
 ### Description
-Describe what your project is about and what it does
+This project prompts the user to choose the preferred city and time frame and then returns the corresponding analytics
 
 ### Files used
-Include the files used
+These program uses a python file for the code. And 3 csv files as data sources: chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104
