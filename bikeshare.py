@@ -5,6 +5,7 @@ import calendar
 import datetime
 from tabulate import tabulate
 
+# Data source input. In case of having more data in future please add here
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -63,7 +64,7 @@ def get_input_and_load_data():
     df = pd.read_csv(CITY_DATA[city])
     df['city']=city
 
-    # ask user for data preview
+    # Ask user for data preview
     preview = input('\nWould you like to see the first 5 rows of the data? Enter yes or no.\n')
     n=0
     pd.set_option("display.max.columns", None)
@@ -78,6 +79,8 @@ def get_input_and_load_data():
                 break
         else:
             break
+
+    # Data manipulation
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -200,7 +203,6 @@ def user_stats(df):
 
 def main():
     while True:
-#         city, month, day = get_filters()
         df = get_input_and_load_data()
 
         time_stats(df)
