@@ -112,8 +112,8 @@ def time_stats(df):
     # display the most common start hour
     print('Based on our data we can also say that {} is their preferred hour to use our service'.format(df['hour'].value_counts().idxmax()))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    # print("\nThis took %s seconds." % (time.time() - start_time))
+    # print('-'*40)
 
 
 def station_stats(df):
@@ -131,8 +131,8 @@ def station_stats(df):
     print('Most preferred combination from our users is starting from station {} and ending on station {}'.format( df.groupby(['Start Station', 'End Station']).size().idxmax()[0],df.groupby(['Start Station', 'End Station']).size().idxmax()[1]))
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    # print("\nThis took %s seconds." % (time.time() - start_time))
+    # print('-'*40)
 
 TIME_DURATION_UNITS = (
     ('year', 60*60*24*7*30*12),
@@ -167,8 +167,8 @@ def trip_duration_stats(df):
     # display mean travel time
     print('Average travel time per rental is {}!'.format(human_time_duration(df['Trip Duration'].mean())))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    # print("\nThis took %s seconds." % (time.time() - start_time))
+    # print('-'*40)
 
 def pprint_df(dframe):
     return tabulate(dframe, headers='keys', tablefmt='psql', showindex=False)
@@ -194,8 +194,8 @@ def user_stats(df):
         print('Our youngest user was born on {}\nOur oldest user was born on {}\nAnd the majority of our users were born on {}\n'.format(int(df['Birth Year'].min()),int(df['Birth Year'].max()), int(df['Birth Year'].mode())))
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    # print("\nThis took %s seconds." % (time.time() - start_time))
+    # print('-'*40)
 
 
 def main():
